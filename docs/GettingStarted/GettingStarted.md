@@ -1,7 +1,32 @@
-# Gettting Started with PyHCL
+# Getting Started
+
+SpinalHDL is a hardware description language written in Scala, a statically-typed functional language using the Java virtual machine (JVM). In order to start programming with SpinalHDL, you must have a JVM as well as the Scala compiler. In the next section, we will explain how to download those tools if you don’t have them already.
 
 
-## Getting Started
+## Requirements / Things to download to get started
+
+Before you download the SpinalHDL tools, you need to install:
+* Python 3.7 or above
+* FIRRTL environment
+
+### FIRRTL
+Firrtl is an intermediate representation (IR) for digital circuits designed as a platform for writing circuit-level transformations. In Chisel3 version, the framework tools are compiled in a chain from Scala to FIRRTL to Verilog. the introduction of FIRRTL makes the front and back end of the framework practically replaceable with other languages. the target language of PyHCL is FIRRTL and calls the FIRRTL compiler to generate Verilog code. So to use PyHCL you need to configure the FIRRTL environment.
+The FIRRTL installation and configuration process is described in detail in the FIRRTL Github repo:
+
+<https://github.com/chipsalliance/firrtl#installation-instructions>
+
+You need to follow the instructions above to install verilator, yosys and sbt, which are the environments that FIRRTL depends on. Then you need to compile and install FIRRTL, and if there are no problems, the FIRRTL executable will be generated in `/firrtl/utils/bin`. Next you need to add it to the system environment variables, for different operating systems, the method of adding environment variables are different, you need to check the method yourself on the Internet. Eventually, if you successfully add firrtl to the environment variables, typing `firrtl --help` in the terminal will display the information about the firrtl command.
+
+## Other tools
+
+## How to start programming with SpinalHDL
+### The SBT way
+### The IDE way, with IntelliJ IDEA and its Scala plugin
+## A very simple SpinalHDL example
+### Generated code
+
+
+
 ```shell
 git clone git@github.com:scutdig/PyChip-py-hcl.git
 ```

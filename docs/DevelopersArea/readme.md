@@ -2,6 +2,6 @@
 sort: 14
 ---
 
-# Developers Area
+# About Pyhcl
 
 {% include list.liquid %}
