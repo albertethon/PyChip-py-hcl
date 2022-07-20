@@ -1,4 +1,4 @@
-# Data Types
+# Introduction
 
 - Supports multiple data types: `UInt`, `SInt`, `Vector`, `Bundle`, `Clock`, `Memory`, and casual combination between them.
 - Supports object-oriented inheritance, can compose modules by writing fewer codes.
@@ -6,17 +6,6 @@
 - Supports the parameterization of variables, such as bit width, with the syntax facilities of the host language Python.
 
 
-## UInt/SInt
-* `U(N.w)`: length `N` unsigned integer that includes Bits operators and
-  unsigned arithmetic (e.g. `+`, `-`, ...) and comparison operators (e.g.
-  `<`, `<=`, ...)
-* `S(N.w)`: length `N` signed integer that includes Bits operators and
-  signed arithmetic (e.g. `+`, `-`, ...) and comparison operators (e.g.
-  `<`, `<=`, ...)
-
-## Bool
-* `Bool`: bool value，which is `U(1.w)`
-* `true, false`: boolean literals
 
 ## Clock
 * `Clock`: bool value，which is `U(1.w)`

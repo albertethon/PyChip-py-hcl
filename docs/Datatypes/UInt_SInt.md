@@ -1,0 +1,83 @@
+---
+sort: 3
+---
+# UInt/SInt
+* `U(N.w)`: length `N` unsigned integer that includes Bits operators and
+  unsigned arithmetic (e.g. `+`, `-`, ...) and comparison operators (e.g.
+  `<`, `<=`, ...)
+* `S(N.w)`: length `N` signed integer that includes Bits operators and
+  signed arithmetic (e.g. `+`, `-`, ...) and comparison operators (e.g.
+  `<`, `<=`, ...)
+
+## Description
+The `U`/`S` type corresponds to a vector of bits that can be used for `signed`/`unsigned` integer arithmetic.
+## Declaration
+|                      Syntax                       |                             Description                              |    Return    |
+|:-------------------------------------------------:|:--------------------------------------------------------------------:|:------------:|
+|           U(value:Int)<br/>S(value:Int)           |     Create an unsigned/signed <br/>integer assigned with ‘value’     |   U<br/>S    |
+|            U.w(x bits)<br/>S.w(x bits)            |          Create an unsigned/signed <br/>integer with x bits          |   U<br/>S    |
+| U.w(x bits)(value:Int)<br/>S.w(x bits)(value:Int) | Create an unsigned/signed <br/>integer assigned with ‘value’, x bits |   U<br/>S    |
+
+```python
+U(1)	# 1-bit unsigend decimal value 1
+U(0x126) # 12-bit unsigned hexadecimal value 0x126
+U.w(4)(10) # 4-bit unsigned decimal value 10
+S.w(16)(0x11) # 16-bit signed hexadecimal value 0x11
+```
+## Operations
+
+The following operators are available for the U and S types:
+### Logic
+
+|  Operator  |              Description              |      Return       |
+|:----------:|:-------------------------------------:|:-----------------:|
+|   x ^ y    |              Bitwise XOR              | T(max(w(xy) bits) |
+|     ~x     |              Bitwise NOT              |    T(w(x) bits    |
+|   x & y    |              Bitwise AND              | T(max(w(xy) bits) |
+| x &#124; y |              Bitwise OR               | T(max(w(xy) bits) |
+|   x >> y   | 	Logical(U)/Arithmetic(S) shift right |   T(w(x) bits)    |
+|   x << y   |          	Logical shift left          | T(w(x) + y bits)  |
+
+```python
+    Sa = S(32)
+    Sc = Sa << 2
+
+    Ua = U(31)
+    Ub = U(2)
+    Uc = ~(Ua & Ub)
+    
+    io.cout @= Uc ^ Ub | U(7)
+    io.sout @= Sc
+```
+
+### Arithmetic
+| Operator |        Description        |
+|:--------:|:-------------------------:|
+|  x + y   |    Arithmetic addition    |
+|  x - y   |  Arithmetic subtraction   |
+|  x * y   | Arithmetic multiplication |
+|  x / y   |    Arithmetic division    |
+|  x % y   |    Arithmetic modules     |
+|   - x    |    Arithmetic negative    |
+
+```python
+# modules, subtraction
+    temp = S(7) % S(3) - S(1)
+```
+
+### Comparison
+| Operator |              Description              |      Return       |
+|:--------:|:-------------------------------------:|:-----------------:|
+|  x == y  |              Bitwise XOR              | T(max(w(xy) bits) |
+|  x != y  |              Bitwise NOT              |    T(w(x) bits    |
+|  x > y   |              Bitwise AND              | T(max(w(xy) bits) |
+|  x >= y  |              Bitwise OR               | T(max(w(xy) bits) |
+|  x < y   | 	Logical(U)/Arithmetic(S) shift right |   T(w(x) bits)    |
+|  x <= y  |          	Logical shift left          | T(w(x) + y bits)  |
+
+```python
+# temp is U.w(1)
+    temp = S(5) > S(3)
+    io.sout @= temp
+```
+### Type cast
