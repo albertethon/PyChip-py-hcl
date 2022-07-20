@@ -1,3 +1,6 @@
+---
+sort: 1
+---
 # FAQ
 ## What is the overhead of PyHCL generated RTL compared to human written VHDL/Verilog?
 PyHCL is a hardware construct language like [Chisel](https://github.com/freechipsproject/chisel3) but more lightweight and more relaxed to use.
