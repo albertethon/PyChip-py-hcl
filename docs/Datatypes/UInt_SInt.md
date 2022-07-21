@@ -2,13 +2,6 @@
 sort: 3
 ---
 # UInt/SInt
-* `U(N.w)`: length `N` unsigned integer that includes Bits operators and
-  unsigned arithmetic (e.g. `+`, `-`, ...) and comparison operators (e.g.
-  `<`, `<=`, ...)
-* `S(N.w)`: length `N` signed integer that includes Bits operators and
-  signed arithmetic (e.g. `+`, `-`, ...) and comparison operators (e.g.
-  `<`, `<=`, ...)
-
 ## Description
 The `U`/`S` type corresponds to a vector of bits that can be used for `signed`/`unsigned` integer arithmetic.
 ## Declaration

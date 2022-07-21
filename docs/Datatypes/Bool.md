@@ -2,7 +2,6 @@
 sort: 1
 ---
 # Bool
->everything between [] is optional
 
 ## Description
 The Bool type corresponds to `U.w(1)`.
