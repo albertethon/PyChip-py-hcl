@@ -5,4 +5,4 @@ sort: 4
 
 ## Description
 ## Declaration
-## Operations
+## Operators

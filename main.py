@@ -9,22 +9,23 @@ class FullAdder(Module):
         # sum=Output(Bool),
         cout=Output(U.w(20)),
         sout=Output(S.w(20)),
-        bout=Output(U.w(20)),
+        bout=Output(U.w(1)),
     )
+    rarray = Reg(Vec(4, U.w(16)))  # A 16-bit 4 length unsigned integer register array
 
-    Sa = S(32)
-    Sb = S(2)
-    Ua = U(31)
-    Ub = U(2)
-    Uc = ~(Ua & Ub)
-    Sc = Sa << 2
-    io.cout @= Uc ^ Ub | U(7)
-    io.sout @= Sc
-    temp = S(5) > S(3)
-    io.sout @= temp
+    breg = Reg(Bundle(
+        x=U.w(16),
+        y=S.w(16),
+        z=Bool
+    ))
+    # io.cout @= Sa.to_uint()
+    # breg.x <<= U(12)
+    # breg.y <<= S(4)
+    # breg.z <<= Bool(False)
+
 if __name__ == '__main__':
     # emit high firrtl
-    # Emitter.dump(Emitter.emit(FullAdder(), HighForm), "FullAdder.fir")
+    # Emitter.dumpVerilog(Emitter.dump(Emitter.emit(FullAdder(), HighForm), "FullAdder.fir"))
     # emit lowered firrtl
     # Emitter.dump(Emitter.emit(FullAdder(), LowForm), "FullAdder.lo.fir")
     # emit verilog

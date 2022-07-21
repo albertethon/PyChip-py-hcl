@@ -24,7 +24,7 @@ U(0x126) # 12-bit unsigned hexadecimal value 0x126
 U.w(4)(10) # 4-bit unsigned decimal value 10
 S.w(16)(0x11) # 16-bit signed hexadecimal value 0x11
 ```
-## Operations
+## Operators
 
 The following operators are available for the U and S types:
 ### Logic
@@ -66,14 +66,14 @@ The following operators are available for the U and S types:
 ```
 
 ### Comparison
-| Operator |              Description              |      Return       |
-|:--------:|:-------------------------------------:|:-----------------:|
-|  x == y  |              Bitwise XOR              | T(max(w(xy) bits) |
-|  x != y  |              Bitwise NOT              |    T(w(x) bits    |
-|  x > y   |              Bitwise AND              | T(max(w(xy) bits) |
-|  x >= y  |              Bitwise OR               | T(max(w(xy) bits) |
-|  x < y   | 	Logical(U)/Arithmetic(S) shift right |   T(w(x) bits)    |
-|  x <= y  |          	Logical shift left          | T(w(x) + y bits)  |
+| Operator |      Description      | Return |
+|:--------:|:---------------------:|:------:|
+|  x == y  |       Equality        |  Bool  |
+|  x != y  |      Inequality       |  Bool  |
+|  x > y   |     Greater than      |  Bool  |
+|  x >= y  | Greater than or equal |  Bool  |
+|  x < y   |      	Less than       |  Bool  |
+|  x <= y  |  	Less than or equal  |  Bool  |
 
 ```python
 # temp is U.w(1)
@@ -81,3 +81,28 @@ The following operators are available for the U and S types:
     io.sout @= temp
 ```
 ### Type cast
+|  Operator   | Description  |     Return      |
+|:-----------:|:------------:|:---------------:|
+| x.to_uint() | SInt to UInt | UInt(w(x) bits) |
+| x.to_sint() | UInt to SInt | SInt(w(x) bits) |
+
+```python
+# cast uint to sint
+    Ua = U(20)
+    io.Sout @= Ua.to_sint()
+```
+
+### Bit extraction
+
+```python
+```
+
+### Misc
+```python
+
+```
+
+### FixPoint operations
+#### Lower bit operations
+#### High bit operations
+#### fixTo function
