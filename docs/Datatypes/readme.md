@@ -8,7 +8,14 @@ sort: 3
 - Supports a bunch of convenient operations, such as the addition of `UInt`s, `SInt`s, `Vector`s and `Bundle`s.
 - Supports the parameterization of variables, such as bit width, with the syntax facilities of the host language Python.
 
+## UInt/SInt
+`U.w(width)(value)`: length `N` unsigned integer that includes Bits operators and unsigned arithmetic (e.g. `+`, `-`, …) and comparison operators (e.g. `<`, `<=`, …)
 
+`S.w(width)(value)`: length N signed integer that includes Bits operators and signed arithmetic (e.g. `+`, `-`, …) and comparison operators (e.g. `<`, `<=`, …)
+
+## Bool
+* `Bool`: bool value，which is `U(1.w)`
+* `True,False`: boolean literals
 
 ## Clock
 * `Clock`: bool value，which is `U(1.w)`

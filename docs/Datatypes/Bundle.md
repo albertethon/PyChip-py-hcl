@@ -1,7 +1,7 @@
 ---
 sort: 5
 ---
-# Bundle
+# Bundle！
 ## Description
 The Bundle is a composite type that defines a group of named signals (of any PyHCL basic type) under a single name. It is similar to Chisel Bundle. Actually, in PyHCL's core library, IO is actually a Bundle and translate to FIRRTL later on. As a beginner of PyHCL, you could simply treat Bundle as the struct data structure of C/C++.
 ## Declaration
@@ -35,5 +35,4 @@ io.out <<= breg.x
 ### Comparison
 ### Type cast
 ### Convert Bits back to Bundle
-> we don't have Bits
 ## IO Element direction
