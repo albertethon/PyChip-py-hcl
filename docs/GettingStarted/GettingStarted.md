@@ -12,7 +12,8 @@ Before you download the PyHCL tools, you need to install:
 * FIRRTL environment
 
 ### Python Guide
-https://www.python.org/about/gettingstarted/
+
+<https://www.python.org/about/gettingstarted/>
 
 ### FIRRTL
 Firrtl is an intermediate representation (IR) for digital circuits designed as a platform for writing circuit-level transformations. In Chisel3 version, the framework tools are compiled in a chain from Scala to FIRRTL to Verilog. The introduction of FIRRTL makes the front and back end of the framework practically replaceable with other languages. The target language of PyHCL is FIRRTL and calls the FIRRTL compiler to generate Verilog code. So to use PyHCL you need to configure the FIRRTL environment. \

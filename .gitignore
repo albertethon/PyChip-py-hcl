@@ -120,10 +120,11 @@ venv.bak/
 
 
 temp
-
+example/simulation
+example/.fir
+example/.v
 # jar
 # *.jar
-main.py
 
 # docs
 _site/

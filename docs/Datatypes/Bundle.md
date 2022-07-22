@@ -29,6 +29,7 @@ breg.z <<= Bool(False)
 io.out <<= breg.x
 ```
 > Bundle is still an experimental feature of PyHCL, we suggest that you only include basic types in Bundle.
+
 ### Conditional signals
 
 ## Operators

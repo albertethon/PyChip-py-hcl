@@ -5,6 +5,7 @@ sort: 3
 ## Description
 The `U`/`S` type corresponds to a vector of bits that can be used for `signed`/`unsigned` integer arithmetic.
 ## Declaration
+
 |                      Syntax                       |                             Description                              |    Return    |
 |:-------------------------------------------------:|:--------------------------------------------------------------------:|:------------:|
 |           U(value:Int)<br/>S(value:Int)           |     Create an unsigned/signed <br/>integer assigned with ‘value’     |   U<br/>S    |
@@ -44,6 +45,7 @@ The following operators are available for the U and S types:
 ```
 
 ### Arithmetic
+
 | Operator |        Description        |
 |:--------:|:-------------------------:|
 |  x + y   |    Arithmetic addition    |
@@ -59,6 +61,7 @@ The following operators are available for the U and S types:
 ```
 
 ### Comparison
+
 | Operator |      Description      | Return |
 |:--------:|:---------------------:|:------:|
 |  x == y  |       Equality        |  Bool  |
@@ -73,7 +76,8 @@ The following operators are available for the U and S types:
     temp = S(5) > S(3)
     io.sout @= temp
 ```
-### Type cast
+### Type cast!
+
 |  Operator   | Description  |     Return      |
 |:-----------:|:------------:|:---------------:|
 | x.to_uint() | SInt to UInt | UInt(w(x) bits) |
@@ -87,13 +91,7 @@ The following operators are available for the U and S types:
 
 ### Bit extraction
 
-```python
-```
-
 ### Misc
-```python
-
-```
 
 ### FixPoint operations
 #### Lower bit operations
