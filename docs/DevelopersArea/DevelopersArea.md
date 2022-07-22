@@ -28,6 +28,7 @@
 
 # Types
 ## Introduction
+
 - Supports multiple data types: `UInt`, `SInt`, `Vector`, `Bundle`, `Clock`, `Memory`, and casual combination between them.
 - Supports object-oriented inheritance, can compose modules by writing fewer codes.
 - Supports a bunch of convenient operations, such as the addition of `UInt`s, `SInt`s, `Vector`s and `Bundle`s.
@@ -100,6 +101,7 @@ rarray = Wire(Vec(4, U.w(16)))	# A 16-bit 4 length unsigned integer wire array
 for i in range(0, 4):
   rarray[i] <<= U(i)
 ```
+
 ## Bundle
 ### Simple example(RGB/VGA)
 ### Interface example(APB)

@@ -120,13 +120,11 @@ venv.bak/
 
 
 temp
-example/simulation
-example/.fir
-example/.v
+
 # jar
 # *.jar
 
 # docs
 _site/
-errors/
+testfordocs/
 *.lock
