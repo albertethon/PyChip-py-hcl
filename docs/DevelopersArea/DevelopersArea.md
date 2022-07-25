@@ -32,12 +32,27 @@ sort: 1
 
 # Types
 ## Introduction
-
 - Supports multiple data types: `UInt`, `SInt`, `Vector`, `Bundle`, `Clock`, `Memory`, and casual combination between them.
 - Supports object-oriented inheritance, can compose modules by writing fewer codes.
 - Supports a bunch of convenient operations, such as the addition of `UInt`s, `SInt`s, `Vector`s and `Bundle`s.
 - Supports the parameterization of variables, such as bit width, with the syntax facilities of the host language Python.
-- 
+  
+- Base types : `Bool`, `U`, `Clock` for unsigned integers, `S` for signed integers.
+- Composite types : `Bundle`, `Vec`.
+  ![Types](../images/PyHCL_IR-Example.jpg)
+
+Those types and their usage (with examples) are explained hereafter.
+
+About the fixed point is not supported.
+
+- `U`	    Unsigned integer
+- `S`	    Signed integer
+- `Bool`	Boolean type, implemented as 1-bit unsigned integer
+- `Clock`	Implicit built-in data type represents the clock of a module
+- `Vec`	    Create an indexable vector consists of elements in same data type
+- `Bundle`	Create a set consists of elements in different data types
+
+
 ## Bool
 
 * `Bool`: bool value，which is `U(1.w)`
@@ -78,7 +93,7 @@ S.w(16)(0x11) # 16-bit signed hexadecimal value 0x11
 |   x ^ y    |              Bitwise XOR              |
 |     ~x     |              Bitwise NOT              |
 |   x & y    |              Bitwise AND              |
-| x &#124; y |              Bitwise OR               |
+|  x &#124; y   |              Bitwise OR               |
 |   x >> y   | 	Logical(U)/Arithmetic(S) shift right |
 |   x << y   |          	Logical shift left          |
 |   x + y    |          Arithmetic addition          |
@@ -93,6 +108,7 @@ S.w(16)(0x11) # 16-bit signed hexadecimal value 0x11
 |   x >= y   |         Greater than or equal         |
 |   x < y    |              	Less than               |
 |   x <= y   |          	Less than or equal          |
+
 
 ## Bool,Bits,UInt,SInt
 `cast function`

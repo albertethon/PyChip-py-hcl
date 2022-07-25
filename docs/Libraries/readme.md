@@ -2,6 +2,6 @@
 sort: 9
 ---
 
-# About Pyhcl
+# Library
 
 {% include list.liquid %}

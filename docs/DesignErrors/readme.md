@@ -2,6 +2,6 @@
 sort: 7
 ---
 
-# About Pyhcl
+# Design errors
 
 {% include list.liquid %}

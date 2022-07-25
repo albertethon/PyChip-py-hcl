@@ -2,6 +2,6 @@
 sort: 13
 ---
 
-# About Pyhcl
+# Legncy
 
 {% include list.liquid %}
