@@ -1,9 +1,9 @@
 # Semantic
 
 ## Assignments
-* `@=` and `@=` 
+* `@=` and `<<=` 
 ```python
-# io.sum @= a_xor_b ^ io.cin
+# io.sum <<= a_xor_b ^ io.cin
 io.sum @= a_xor_b ^ io.cin
 ```
 

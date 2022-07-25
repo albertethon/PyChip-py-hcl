@@ -1,3 +1,7 @@
+---
+sort: 1
+---
+
 # Bus Slave Factory Implementation
 ## Introduction
 ## Specification
@@ -68,6 +72,7 @@ U(0x126) # 12-bit unsigned hexadecimal value 0x126
 U.w(4)(10) # 4-bit unsigned decimal value 10
 S.w(16)(0x11) # 16-bit signed hexadecimal value 0x11
 ```
+
 |  Operator  |              Description              |
 |:----------:|:-------------------------------------:|
 |   x ^ y    |              Bitwise XOR              |
